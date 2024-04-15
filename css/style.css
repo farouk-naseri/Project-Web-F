@@ -30,6 +30,7 @@ nav{
 .box.principal{
     background-color: var(--bottumn-secondary-color);
     margin-bottom: 50px;
+    margin-top:50px ;
     height: 120px;
     border-radius: 30px;
     text-align: center;
@@ -79,4 +80,45 @@ i {
     height: 100px;
     border-radius: 30px;
     padding: 20px 5px;
+}
+@media (max-width:768px) {
+    nav{
+        left: -230px;
+    }
+    .bx-menu{
+        position: absolute;
+        left: -6px;
+        top: 1px;
+        font-size: 33px;
+        z-index: 100;
+
+    }
+    .open{
+        animation-name:openMenu ;
+        animation-duration: 1s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+    }
+    @keyframes openMenu {
+        0%{
+            left:-230px;
+        }
+        100%{
+            left: 0;
+        }
+    }
+    .close{
+        animation-name:closeMenu ;
+        animation-duration: 1s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+    }
+    @keyframes closeMenu {
+        0%{
+            left: 0;
+        }
+        100%{
+            left:-230px;
+        }
+    }
 }
