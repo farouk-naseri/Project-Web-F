@@ -1,3 +1,4 @@
+// start of SLIDE NAVBAR 
 let menubtn = document.querySelector(".bx-menu");
 let nav = document.querySelector("nav")
 menubtn.addEventListener("click",function(){
@@ -10,3 +11,4 @@ menubtn.addEventListener("click",function(){
         nav.classList.add("open");
     }
 })
+//end of SLIDE NAVBAR
