@@ -22,12 +22,31 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* scroll bar style  */
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: #C0C0C0;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #475885;
+    height: 10px;
+    border-radius: 20px;
+}
+
 html,body{
-    height: 100%;
+    height: 200vh;
+    scroll-behavior: smooth;
 }
 body{
+    position: relative;
     font-family: "Montserrat", sans-serif;
     list-style: none;
+    background-image: url('../tools/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+   
 }
 /* end of rules */
 .bx-menu{
@@ -35,17 +54,22 @@ body{
 }
 /* START OF NAV  */
 nav{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     position:absolute;
     width: 230px;
     background:linear-gradient(#6A7B8C 10%  ,#F0F8FF 80%,gray ) ;
-    height: 110%;
     top: 0;
-    padding:3% ;
+    padding:20px ;
+    height: 200vh;
 }
+nav .container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-evenly;
+    position: fixed;
+}
+
 .box.principal{
     background-color: #C0C0C0 ;
     width: 200px;
@@ -53,19 +77,29 @@ nav{
     border-radius: 30px;
     text-align: center;
     padding: 20px;
+color: #475885;
 }
 .box.principal div:nth-child(2) p{
     margin-left: 4px;
 }
 .box.principal div:last-child p{
     margin-top: 10px;
+    
 }
 .box div{
     display: flex;
-    
 }
-i {  
-    color: black;
+.box .name{
+    color: #C0C0C0;
+}
+.box .eemail{
+    color: white;
+}
+.box .eemail a{
+    color: white;
+}
+
+.box i {  
     width: 15px;
     font-size: 18px;
     margin: 4px;
@@ -73,8 +107,7 @@ i {
 .box.principal div:first-child{
     font-weight: 600;
     font-size: 20px;
-    color: aliceblue;
-    
+    color: aliceblue; 
 }
 .box.principal div:first-child i{
     font-size: 19px;
@@ -146,7 +179,7 @@ i {
 /* END OF NAV  */
 /* header section */
 header {
-    height: 10%;
+    height: 70px;
     width: calc(100% - 230px);
     margin-left: 230px;
     background-color: #C0C0C0;
@@ -176,6 +209,8 @@ header h2 {
 }
 ul {
     display: flex;
+    width: 200px;
+    justify-content: space-evenly;
 }
 li{
     list-style: none;
@@ -188,8 +223,8 @@ a{
  /* START OF SECTION PART  */
 #section-principale{
     margin-left: 230px;
-    padding: 10px 50px 50px 70px;
-    background-image: url('/tools/background.jpg');
+    padding: 10px 50px 50px 50px;
+   
 }
 /* @media(max-width:768px){
     #section-principale{
@@ -213,18 +248,12 @@ a{
 }
 /* start of description part */
 .discrip-box {
-    background-color: rgba(45, 34, 34, 0.3) ;
     height: 120px;
     border-radius: 30px;
     padding: 20px;
     color: var(--primary-hv-color);
     text-align: center;
     transition: 0.3s;
-}
-.discrip-box:hover{
-    scale: 1.1;
-    color: rgba(45, 34, 34, 0.7);
-    background-color: rgba(220, 220, 220, 0.3);
 }
 #section-principale .discrip-box  h2{
     margin: 0;
@@ -234,11 +263,14 @@ a{
     font-size: 23px;
     color: hsl(224, 30%, 27%);
     margin: 10px 0;
+    text-align: center;
+
 }
 /* start of formation part */
 #section-principale .formation-part{
     display: flex;
     margin-top: 10px;
+    justify-content: space-between;
 }
 .formation-part .formation{
     display: flex;
@@ -270,6 +302,7 @@ a{
     flex-direction: column;
     justify-content: center;
     padding: 0 0 0 10px;
+
 }
 .formation-part .formation article .text p:first-child{
     font-size: 18px;
@@ -281,16 +314,15 @@ a{
     text-align: center;
 }
 .formation-part .formation article:hover{
-    scale: 1.4;
+    scale: 1.2;
     background-color: rgba(45, 34, 34, 0.5);
+    backdrop-filter: blur(10px);
     border-radius: 30px;
     opacity: 1;
 }
-.formation-part .formation article:hover ~ article{
-    opacity: 0.3;
-}
-.formation-part .formation article:not(:hover){
-    opacity: 0.7;
+
+.formation-part .formation article:hover:not(:hover){
+    opacity: .3;
 }
 button{
     border: 0;
@@ -308,21 +340,23 @@ button:hover{
     color: gainsboro;
 }
 /* end of formation part */
+
 /* start of aside part */
 aside {
-    position: absolute;
+   
     background-color: rgba(45, 34, 34, 0.5);
     border-radius: 30px;
-    width: 22%;
+    width: 300px;
     height:330px ;
     right: 2%;
     padding: 4% 0;
     transition: 0.3s;
+    backdrop-filter: blur(10px);
 }
 aside:hover{
     scale: 1.1;
-    color: rgba(45, 34, 34, 0.5);
-    background-color: rgba(220, 220, 220, 0.3);
+    
+   
 }
 aside .container {
     width: 100%;
@@ -362,4 +396,241 @@ aside .container {
 }
 .scroll-efect p span{
     color: hsl(224, 30%, 40%);
+}
+/* end of aside  */
+/* END OF SECTION PRINCIPAL  */
+
+/* START OF SECTION 2   comment part*/
+#section2{
+    box-shadow: -1px 5px 42px 0px rgba(102,102,102,0.75);
+    margin-left: 230px;
+    padding: 50px ;
+    --s: 50px;
+    --c: #191b22;
+    --_s: calc(2*var(--s)) calc(2*var(--s));
+    --_g: 35.36% 35.36% at;
+    --_c: #0403153e 66%, #000b35a7 68% 70%, #1817206f 72%;
+    background: radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s) / var(--_s), radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s) / var(--_s), radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0 / var(--_s), radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0 / var(--_s), repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 0 / var(--_s), radial-gradient(var(--_c)) 0 calc(var(--s) / 2) / var(--s) var(--s) var(--c);
+    background-attachment: fixed;
+    border-radius: 50px 50px 0 0 ;
+}
+#section2 .container{
+    display: flex;
+    justify-content: space-between;
+}
+#section2 .container .comments{
+    display: flex;
+    flex-direction: column;
+}
+/* #section2 .container form div{
+    border-bottom: 3px solid #475885;
+    border-radius: 14px;
+    width: 500px;
+    height: 60px;
+
+} */
+#section2 .comments input[type="email"]{
+    position: relative;
+    width: 500px;
+    padding: 7px 10px;
+    outline: none;
+    border: none;
+    height: 60px;
+    font-size: 20px;
+    background-color: transparent;
+    border-bottom: 3px solid #475885;
+    z-index: 5;
+    color: #6d6d6d;
+}
+#section2 .comments input[type="email"]::placeholder{
+    color: #C0C0C0;
+}
+#section2 .comments  div{
+    position: relative;
+    margin-bottom: 10px;
+}
+#section2 .comments  div span{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    height: 0;
+    z-index: 3;
+    border-radius: 7px;
+    transition: all .3s;
+}
+#section2 .comments input[type="email"]:focus ~ span{
+    border-radius: 7px;
+    height: 100%;
+}
+#section2 .comments textarea{
+    width: 500px;
+    padding: 7px 10px;
+    height: 360px;
+    outline: none;
+    border: none;
+    margin-bottom: 10px;
+    background-color: white;
+    font-size: 20px;
+    border-radius: 7px;
+    color: #6d6d6d;
+}
+textarea::placeholder{
+    font-style: italic;
+}
+#section2 .display-comments{
+    
+    height: 500px;
+    width: 500px;
+    background-color: white;
+    border-radius: 7px;
+    overflow-x: auto;
+}
+.titre{
+    
+    padding: 30px;
+    border-radius: 7px 7px 0 0;
+    background-color: #475885;
+    text-align: center;
+    color: white;
+    font-size: 23px;
+}
+/* ::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: #C0C0C0;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #475885;
+    height: 10px;
+    border-radius: 20px;
+} */
+#section2 .display-comments::-webkit-scrollbar-track{
+    background-color: #C0C0C0;
+}
+#section2 .display-comments::-webkit-scrollbar-thumb{
+    
+        background-color:  #191b22;
+        height: 10px;
+        border-radius: 20px;
+    
+    
+}
+#section2 input[type="submit"]{
+    padding: 20px;
+    font-size: 20px;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    background-color: #475885;
+}
+/* END OF SECTION 2  */
+/* START STYLE OF COMMENT  */
+#section2 .comment-style{
+    position: relative;
+    padding: 10px 20px;
+    background-color: #D3D3D3;
+    border-radius: 20px;
+    color: #000000	;
+    font-size: 20px;
+    margin: 10px;
+}
+#section2 .comment-style .email-part{
+    color:  #475885;
+    margin-bottom: 7px;
+    font-size: 17px;
+    font-weight: 600;
+}
+#section2 .comment-style .comment-part{
+    font-size: 17px;
+    padding-left: 29px ;
+    word-break: break-all;
+}
+.bx-user{
+    color: #475885;
+    margin-right: 10px; 
+    border-radius: 7px;
+}
+
+.like-part{
+    display: flex;
+    justify-content: flex-end;
+}
+.like-part i{
+margin:0 7px;
+color: gray;
+cursor: pointer;
+
+}
+.like-part span{
+    margin-left: 2px;
+    position: relative;
+    bottom: 2px;
+}
+.likeEffect{
+    animation: likeEffect .3s forwards;
+}
+@keyframes likeEffect {
+    0%{
+        color: gray;
+    }
+    100%{
+        color: rgb(244, 48, 48);
+    }
+}
+.rm-likeEffect{
+    animation: rmlikeEffect .3s forwards;
+}
+@keyframes rmlikeEffect {
+    0%{
+        color: rgb(244, 48, 48);
+    }
+    100%{
+        color: gray;
+    }
+}
+
+
+
+
+/*  END STYLE OF COMMENT  */
+@media (min-width:760px) AND (max-width:1150px) {
+    #section-principale .container .formation-part{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .formation-part{
+    }
+    .formation-part aside{
+        margin-top: 20px;
+        width: 100%;
+        backdrop-filter: blur(10px);
+        
+    }
+    .formation-part aside .scroll-efect{
+        font-size: 20px;
+
+    }
+    .formation-part .formation,.formation-part article{
+        width: 100%;
+    }
+    .decription-part{
+        margin-bottom: 50px;
+    }
+    .decription-part  h2{
+        margin-top: 20px;
+    }
+    #section2{
+    }
+    #section2 .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: centers;
+    }
+    #section2 .container form{
+        margin-bottom: 20px;
+    }
+
 }
