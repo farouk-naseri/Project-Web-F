@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+    list-style: none;
+}
+
+/* start of upper part */
+.upper-box {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.title {
+    text-align: center;
+}
+.title p:first-child {
+    letter-spacing: 10px;
+    color: palevioletred;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.title p:nth-child(2) {
+    font-size: 35px;
+    font-weight: 600;
+}
+.upper-box .dash {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.box {
+    display: flex;
+}
+.box p {
+    margin-left: 20px;
+    height: 60px;
+    line-height: 40px; /* Center align vertically */
+    cursor: pointer;
+}
+.box p:hover {
+    border-bottom: 3px solid palevioletred;
+}
+.dash p:last-child {
+    margin-left: 20px;
+    height: 40px;
+    line-height: 40px; /* Center align vertically */
+    cursor: pointer;
+}
+
+/* end of upper part */
+
+/* start of down part */
+.down-box {
+    padding: 20px;
+    background-color: rgb(238, 238, 252);
+}
+.frames {
+    display: flex;
+    justify-content: space-around;
+}
+.frame {
+    width: 250px;
+    height: 300px;
+    background-color: white;
+}
+.frame img {
+    width: 100%;
+    height: auto;
+}
+.frame p:nth-child(2) {
+    font-size: 15px;
+    color: darkgray;
+    margin: 5px 8px;
+}
+.frame p:nth-child(3){
+    margin: 20px 0;
+    margin-left: 7px;
+    font-weight: 600;
+}
+.frame div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.frame div div {
+    display: flex;
+    align-items: center;
+}
+.frame div div i {
+    margin-right: 5px;
+    margin-left: 3px;
+}
+/* end of down part */
+
+button {
+    display: block;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    width: 200px;
+    margin: 40px auto;
+    background-color: palevioletred;
+    color: white;
+    border: none;
+    transition: 0.3s;
+}
+button:hover{
+    background-color: white;
+    color: palevioletred;
+}
+button span {
+    font-size: 15px;
+    text-decoration: line-through;
+}
+
+i {
+    color: palevioletred;
+}
