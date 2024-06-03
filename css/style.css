@@ -1,21 +1,5 @@
 /* start of rules */
 :root{
-    --primary-body-color:hsl(333, 29%, 33%);
-    --primary-hv-color:#482138;
-    --secondary-color:#765D67;
-    --violer7amm9:#1B0C1A;
-    --couleurberk:#2D222F;
-    --byedviolter:#FADCD5;
-    --Dark-grayish-blue: hsl(236, 13%, 42%);
-
-
-
-
-    /* precedent color  */
-    /* --primary-color:#B6A19E;
-    --secondary-color:#6C648B;
-    --bottumn-one-color:#FBA100;
-    --bottumn-secondary-color:#6BBAA7; */
 }
 *{
     margin: 0;
@@ -34,7 +18,6 @@
     height: 10px;
     border-radius: 20px;
 }
-
 html,body{
     height: 200vh;
     scroll-behavior: smooth;
@@ -69,7 +52,6 @@ nav .container{
     justify-content: space-evenly;
     position: fixed;
 }
-
 .box.principal{
     background-color: #C0C0C0 ;
     width: 200px;
@@ -98,7 +80,6 @@ color: #475885;
 .box .eemail a{
     color: white;
 }
-
 .box i {  
     width: 15px;
     font-size: 18px;
@@ -130,8 +111,6 @@ color: #475885;
     font-weight: 600;
     margin: 4px;
 }
-
-
 /* js part  */
 @media (max-width:768px) {
     nav{
@@ -144,7 +123,6 @@ color: #475885;
         top: 1px;
         font-size: 33px;
         z-index: 100;
-
     }
     .open{
         animation-name:openMenu ;
@@ -186,7 +164,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 @media (max-width:768px) {
     header{
@@ -223,21 +200,14 @@ a{
  /* START OF SECTION PART  */
 #section-principale{
     margin-left: 230px;
-    padding: 10px 50px 50px 50px;
-   
+    padding: 10px 50px 50px 50px; 
 }
-/* @media(max-width:768px){
-    #section-principale{
-        margin-left: 0;
-    }
-} */
 #section-principale .container{
     display: flex;
     flex-direction: column;
 }
 #section-principale .decription-part{
     display: flex;align-items: center;justify-content:center;
-
     width: 100%;
     
 }
@@ -264,7 +234,6 @@ a{
     color: hsl(224, 30%, 27%);
     margin: 10px 0;
     text-align: center;
-
 }
 /* start of formation part */
 #section-principale .formation-part{
@@ -302,7 +271,6 @@ a{
     flex-direction: column;
     justify-content: center;
     padding: 0 0 0 10px;
-
 }
 .formation-part .formation article .text p:first-child{
     font-size: 18px;
@@ -320,7 +288,6 @@ a{
     border-radius: 30px;
     opacity: 1;
 }
-
 .formation-part .formation article:hover:not(:hover){
     opacity: .3;
 }
@@ -340,7 +307,6 @@ button:hover{
     color: gainsboro;
 }
 /* end of formation part */
-
 /* start of aside part */
 aside {
    
@@ -354,9 +320,7 @@ aside {
     backdrop-filter: blur(10px);
 }
 aside:hover{
-    scale: 1.1;
-    
-   
+    scale: 1.1; 
 }
 aside .container {
     width: 100%;
@@ -366,9 +330,7 @@ aside .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
-
 @keyframes scroll {
     0% {
         transform: translateY(100%);
@@ -377,7 +339,6 @@ aside .container {
         transform: translateY(-100%);
     }
 }
-
 .scroll-efect {
     position: absolute;
     animation: scroll 8s linear infinite;
@@ -399,7 +360,6 @@ aside .container {
 }
 /* end of aside  */
 /* END OF SECTION PRINCIPAL  */
-
 /* START OF SECTION 2   comment part*/
 #section2{
     box-shadow: -1px 5px 42px 0px rgba(102,102,102,0.75);
@@ -422,13 +382,6 @@ aside .container {
     display: flex;
     flex-direction: column;
 }
-/* #section2 .container form div{
-    border-bottom: 3px solid #475885;
-    border-radius: 14px;
-    width: 500px;
-    height: 60px;
-
-} */
 #section2 .comments input[type="email"]{
     position: relative;
     width: 500px;
@@ -487,8 +440,7 @@ textarea::placeholder{
     border-radius: 7px;
     overflow-x: auto;
 }
-.titre{
-    
+.titre{    
     padding: 30px;
     border-radius: 7px 7px 0 0;
     background-color: #475885;
@@ -514,9 +466,7 @@ textarea::placeholder{
     
         background-color:  #191b22;
         height: 10px;
-        border-radius: 20px;
-    
-    
+        border-radius: 20px;   
 }
 #section2 input[type="submit"]{
     padding: 20px;
@@ -553,7 +503,6 @@ textarea::placeholder{
     margin-right: 10px; 
     border-radius: 7px;
 }
-
 .like-part{
     display: flex;
     justify-content: flex-end;
@@ -562,7 +511,6 @@ textarea::placeholder{
 margin:0 7px;
 color: gray;
 cursor: pointer;
-
 }
 .like-part span{
     margin-left: 2px;
@@ -591,10 +539,6 @@ cursor: pointer;
         color: gray;
     }
 }
-
-
-
-
 /*  END STYLE OF COMMENT  */
 @media (min-width:760px) AND (max-width:1150px) {
     #section-principale .container .formation-part{
@@ -611,7 +555,6 @@ cursor: pointer;
     }
     .formation-part aside .scroll-efect{
         font-size: 20px;
-
     }
     .formation-part .formation,.formation-part article{
         width: 100%;
@@ -632,5 +575,4 @@ cursor: pointer;
     #section2 .container form{
         margin-bottom: 20px;
     }
-
 }
